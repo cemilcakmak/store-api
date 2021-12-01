@@ -2,10 +2,7 @@ const { QueryCursor } = require('mongoose');
 const Product = require('../models/product-model');
 
 const getAllProductsStatic = async (req, res) => {
-    const search = 'a';
-    const products = await Product.find({
-        name: { $regex:search, $options:'i'}
-    });
+    const products = await Product.find({}).select('name price');
     res.status(200).json({ products });
 };
 
