@@ -1,5 +1,5 @@
 require('dotenv').config();
-
+// npm run debug to start nodemon in debug mode.
 const express = require('express');
 const app = express();
 
